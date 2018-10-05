@@ -24,7 +24,7 @@ def lines2json(lines, fname, tokenize_func=None):
     and converts them into a JSON TextAnnotation. This assumes
     that there is one sentence per line, whitespace tokenized. """
 
-    if tokenize_func is None:
+    if not tokenize_func:
         tokenize_func = str.split
 
     doc = {}
