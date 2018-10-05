@@ -1,0 +1,10 @@
+version: '3'
+services:
+  talen-service:
+    container_name: talen-container
+    build: ./docker/talen/
+    ports:
+      - 8009:8009
+    volumes:
+      - ./:/usr/src/app
+    restart: always
