@@ -4,14 +4,11 @@ import json
 import os
 import sys
 
-# Install ccg_nlpy with:
-# $ pip install ccg_nlpy
-
 # This file converts a folder full of text files (one sentence per line, whitespace tokenized)
 # into a folder of tajson files.
 
 # Usage:
-# $ txt2tajson input_folder output_folder
+# $ txt2tajson.py input_folder output_folder
 
 
 def lines2json(lines, fname):
