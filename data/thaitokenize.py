@@ -6,6 +6,7 @@ import sys
 from pythainlp import word_tokenize
 
 # This file converts a folder full of text files into a folder of space-tokenized files.
+# Real spaces in the original text will be represented as "[SP]".
 
 # Usage:
 # $ thaitokenize.py input_folder output_folder
@@ -20,7 +21,7 @@ def convert(infolder, outfolder):
             lines = f.readlines()
         with codecs.open(outfolder + "/" + fname, "w", encoding="utf-8") as out:
             for line in lines:
-                tokens = [tok for tok in word_tokenize(line) if tok != " "]
+                tokens = [tok.replace(" ", "[SP]") for tok in word_tokenize(line)]
                 out.write(" ".join(tokens))
 
 
