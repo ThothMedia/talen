@@ -1,0 +1,4 @@
+name	Thai
+folderpath	data/tajson/tha
+format	tajson
+labels	PER ORG LOC MISC
